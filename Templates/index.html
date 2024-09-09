@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Price Prediction</title>
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="/">FLIGHT PRICE</a>
+    </nav>
+
+    <!-- Form Container -->
+    <div class="container">
+        <form action="/predict" method="post">
+
+            <!-- Departure and Arrival -->
+            <h5>Departure Date</h5>
+            <input type="datetime-local" name="dep_Time" id="dep_Time" required="required">
+
+            <h5>Arrival Date</h5>
+            <input type="datetime-local" name="arrival_Time" id="arrival_Time" required="required">
+
+            <!-- Source and Destination -->
+            <h5>Source</h5>
+            <select name="source" id="source" required="required">
+                <option value="Bangalore">Bangalore </option>
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Kolkata">Kolkata </option>
+                <option value="Mumbai">Mumbai</option>
+            </select>
+
+            <h5>Destination</h5>
+            <select name="destination" id="destination" required="required">
+                <option value="Bangalore">Bangalore </option>
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Kolkata">Kolkata </option>
+                <option value="Mumbai">Mumbai</option>
+            </select>
+
+            <!-- Stops and Airline -->
+            <h5>Stop</h5>
+            <select name="stop" id="stop" required="required">
+                <option value="0">Non-Stop</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+              <!-- Class -->
+              <h5>Class</h5>
+              <select name="class" id="class" required="required">
+                  <option value="1">Economy</option>
+                  <option value="0">Business</option>
+              </select>
+
+            <h5>Airline</h5>
+            <select name="airline" id="airline" required="required">
+                <option value="Air_India">Air India</option>
+                <option value="Vistara">Vistara</option>
+                <option value="SpiceJet">SpiceJet</option>
+                <option value="AirAsia">AirAsia</option>
+                <option value="GO_FIRST">GO FIRST</option>
+                <option value="Indigo">Indigo</option>
+                <option value="Trujet">Trujet</option>
+                <option value="StarAir">StarAir</option>
+            </select>
+
+            <!-- Submit -->
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <h3>{{ prediction_text }}</h3>
+    </div>
+
+</body>
+
+</html>

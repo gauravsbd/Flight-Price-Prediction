@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7;
+    color: #333;
+}
+
+.navbar {
+    background-color: #007acc;
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h5 {
+    color: #007acc;
+    margin: 0 !important;
+}
+
+input[type="datetime-local"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #005f99;
+}
+
+p {
+    text-align: center;
+    color: #777;
+}
+
+h3 {
+    text-align: center;
+    color: #007acc;
+}
