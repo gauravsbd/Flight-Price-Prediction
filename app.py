@@ -258,8 +258,7 @@ def predict():
         print(input_data)
         prediction=model.predict(input_data)
         output=round(prediction[0],2)
-        if (Source == Destination) or (Duration_mins == 0 and Duration_hours == 0):
-            output = 0
+     
         return render_template('index.html',prediction_text="Your Flight price is Re.{}".format(output))
     
     return render_template("index.html")
